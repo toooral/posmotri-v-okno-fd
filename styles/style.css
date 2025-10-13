@@ -56,24 +56,26 @@ ol {
 
 .content {
   display: flex;
+  flex-direction: row;
   column-gap: 30px;
   justify-content: center;
   align-items: flex-end;
-  flex-direction: row;
 }
 
 .result {
-  min-width: 711px;
+  width: 711px;
+  height: 460px;
 }
 
 .result__video {
-  max-width: 711px;
-  height: 386px;
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  object-position: center; 
 }
 
 .content__details {
   width: 100%;
-  max-width: 399px;
 }
 
 .cards-list-item-template {
@@ -87,7 +89,8 @@ ol {
   font-family: 'Oswald', sans-serif;
   color: rgba(255, 255, 255, 1);
   line-height: 70px;
-  margin-bottom: 26px;
+  height: 100%;
+  transform: translateY(-26px);
 }
 
 .content__accent:first-child {
@@ -98,6 +101,7 @@ ol {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 19px;
 }
 
 .content__list-container {
@@ -107,24 +111,25 @@ ol {
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  gap: 30px;
 } 
 
 .content__video-card {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: start;
+  
 }
 
 .content__list {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  margin-bottom: 30px;
+  margin-top: -6px;
 }
 
 .content__video-card-thumbnail {
-  min-width: 194px;
+  width: 194px;
   height: 103px;
   object-fit: contain;
   object-position: center;
@@ -132,10 +137,11 @@ ol {
 
 .result__video-container {
   position: relative;
+  width: 711px; 
+  height: 386px; 
   margin-bottom: 16px;
-  object-fit: contain;
+  object-fit: cover; 
 }
-
 .content__video-card-description-container {
   flex-grow: 1;
 }
@@ -145,7 +151,7 @@ ol {
   font-size: 18px;
   font-weight: 400;
   font-style: normal;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   color: rgba(255, 255, 255, 1);
 }
 
@@ -162,12 +168,11 @@ ol {
   font-weight: 700;
   text-overflow: ellipsis;
   text-transform: uppercase;
-  margin-bottom: 6px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   overflow: hidden;
-  max-width: 200px;
+  max-width: 194px;
 }
 
 .content__video-card-description {
@@ -175,12 +180,12 @@ ol {
   color: rgba(255, 255, 255, 1);
   font-size: 18px;
   font-weight: 400;
-  line-height: 1;
+  line-height: 16px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
-  max-width: 200px;
+  max-width: 194px;
 }
 
 .visually-hidden {
@@ -196,7 +201,7 @@ ol {
 .search-form__checkbox-list {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 9px;
 }
 
 .search-form__fieldset {
@@ -208,7 +213,7 @@ ol {
   flex-direction: row;
   align-items:center;
   width: fit-content;
-  gap: 20px
+  gap: 10px;
 }
 
 .search-form__textfield {
@@ -220,6 +225,7 @@ ol {
   background-color: #1b1919;
   appearance: none;
   height: 27px;
+  width: 224px;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -228,6 +234,9 @@ ol {
 
 .search-form__textfield::placeholder {
   color: rgb(255 255 255 / 0.7);
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .search-form__pseudo-checkbox {
@@ -301,15 +310,7 @@ ol {
 .content__card-link:hover {
   cursor: pointer;
   text-decoration: underline;
-  text-underline-offset: 3px;
 }
-
-/* Не работает подчеркивание для описания к видео при наведение мышки
-.content__card-link:hover .content__video-card-description {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-*/
 
 .content__card-link:focus {
   outline: none;
