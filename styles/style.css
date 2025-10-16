@@ -71,9 +71,10 @@ ol {
 
 .content__details {
   width: 100%;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 21px;
 }
 
 .title {
@@ -103,7 +104,7 @@ ol {
 .content__list-container {
   position: relative;
   height: 298px;
-  width: 395px;
+  width: 400px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -179,7 +180,7 @@ ol {
   line-height: 16px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
   overflow: hidden;
   width: 100%;
   max-width: 194px;
@@ -326,7 +327,6 @@ ol {
 } 
 
 .content__card-link:focus-visible {
-  
   border: 1px solid white;
 }
 
