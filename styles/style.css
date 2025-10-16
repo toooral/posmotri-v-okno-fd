@@ -103,6 +103,7 @@ ol {
 .content__list-container {
   position: relative;
   height: 298px;
+  width: 395px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -165,7 +166,9 @@ ol {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   overflow: hidden;
+  white-space: nowrap;
   width: 100%;
+  max-width: 194px;
 }
 
 .content__video-card-description {
@@ -179,6 +182,7 @@ ol {
   -webkit-line-clamp: 3;
   overflow: hidden;
   width: 100%;
+  max-width: 194px;
 }
 
 .visually-hidden {
@@ -225,11 +229,11 @@ ol {
   width: 224px;
   font-size: inherit;
   font-family: inherit;
-  
 }
 
 .search-form__label:has(:focus-visible) {
   outline: 1px solid white;
+  outline-offset: 3px;
 }
 
 .search-form__textfield::placeholder {
@@ -299,7 +303,8 @@ ol {
 }
 
 .button:focus-visible {
-  outline: 3px solid white;
+  outline: 1px solid white;
+  outline-offset: 2px;
 }
 
 .content__card-link_current {
@@ -321,6 +326,7 @@ ol {
 } 
 
 .content__card-link:focus-visible {
-  outline: 3px solid white;
+  
+  border: 1px solid white;
 }
 
